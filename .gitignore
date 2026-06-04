@@ -1,0 +1,125 @@
+# --- System Files ---
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+
+# --- IDEs and Editors ---
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*~
+
+# --- Python Cache & Compiled Files ---
+__pycache__/
+*.py[codz]
+*$py.class
+*.so
+
+# --- Virtual Environments & Environments ---
+.env
+.envrc
+env/
+venv/
+ENV/
+.venv/
+*.bak/
+
+# --- Package Managers & Lock Files ---
+# Note: Agar aap strictly exact versions track karna chahte hain,
+# toh uv.lock aur poetry.lock ko version control mein rakh sakte hain.
+uv.lock
+poetry.lock
+poetry.toml
+pdm.lock
+pdm.toml
+.pdm-python
+.pdm-build/
+Pipfile.lock
+.pixi/
+__pypackages__/
+
+# --- Distribution & Packaging ---
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+*.manifest
+*.spec
+
+# --- Testing & Code Quality ---
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py.cover
+.hypothesis/
+.pytest_cache/
+cover/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+cython_debug/
+.ruff_cache/
+tempCodeRunnerFile.py
+
+# --- Frameworks & Tools (Django, Flask, Streamlit, etc.) ---
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+instance/
+.webassets-cache
+.scrapy
+docs/_build/
+/site
+.pybuilder/
+target/
+.ipynb_checkpoints
+profile_default/
+ipython_config.py
+celerybeat-schedule
+celerybeat.pid
+*.rdb
+*.aof
+*.pid
+mnesia/
+rabbitmq/
+rabbitmq-data/
+activemq-data/
+*.sage.py
+.abstra/
+.pypirc
+marimo/_static/
+marimo/_lsp/
+__marimo__/
+.streamlit/secrets.toml
+
+# --- Project Specific data_before_anything ---
+# Aapke explicit instructions ke mutabik raw data ko ignore karne ke liye
+data_before_anything/
