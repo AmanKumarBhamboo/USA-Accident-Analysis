@@ -1,0 +1,19 @@
+project meta:
+  name: 'us_accident_analysis'
+  author: 'Aman Kumar Bhamboo'
+  version: '1.0.0'
+
+data_ingestion:
+  artifacts_folder: 'artifacts'
+  raw_data_folder: 'data_before_anything'
+  clean_columns: true
+  strip_names: true
+
+postgres:
+  host: 'localhost'
+  port: 5432
+  database:
+  username:
+  password:
+  schema:
+  table_name:
