@@ -88,4 +88,111 @@ drop column latitude,
 drop column longitude;
 
 -- Adjusting time occured
+alter table lapd_crime.crime_data.crime_combined
+alter column time_occurred type varchar(5);
 
+update lapd_crime.crime_data.crime_combined
+set time_occurred = lpad(time_occurred,4,'0')
+where length(time_occurred) < 4;
+
+select lapd_crime.crime_data.crime_combined.time_occurred from lapd_crime.crime_data.crime_combined
+where lapd_crime.crime_data.crime_combined.time_occurred is not null;
+
+update lapd_crime.crime_data.crime_combined
+set time_occurred = concat(left(time_occurred,2),':',right(time_occurred,2))
+where time_occurred is not null;
+
+ALTER TABLE lapd_crime.crime_data.crime_combined
+ALTER COLUMN time_occurred TYPE TIME using time_occurred::time;
+
+-- Adding a new column named which part of the day
+alter table lapd_crime.crime_data.crime_combined
+add column part_of_day varchar(15);
+
+UPDATE lapd_crime.crime_data.crime_combined
+SET part_of_day = CASE
+    WHEN EXTRACT(HOUR FROM time_occurred) BETWEEN 6 AND 11 THEN 'Morning'
+    WHEN EXTRACT(HOUR FROM time_occurred) BETWEEN 12 AND 16 THEN 'Afternoon'
+    WHEN EXTRACT(HOUR FROM time_occurred) BETWEEN 17 AND 23 THEN 'Evening'
+    ELSE 'Night'
+END
+where time_occurred is not null;
+
+
+--Seeing the final table
+
+select * from lapd_crime.crime_data.crime_combined
+limit 10;
+
+-- Updating the cross street
+update lapd_crime.crime_data.crime_combined
+set cross_street = 'none'
+where cross_street is null;
+
+UPDATE lapd_crime.crime_data.crime_combined
+SET cross_street = TRIM(REGEXP_REPLACE(cross_street, '\s+', ' ', 'g'))
+WHERE cross_street IS NOT NULL;
+
+-- Treating the victim descent
+select distinct lapd_crime.crime_data.crime_combined.victim_descent from lapd_crime.crime_data.crime_combined;
+
+UPDATE lapd_crime.crime_data.crime_combined
+SET victim_descent = CASE
+    WHEN victim_descent IN ('H') THEN 'Hispanic'
+    WHEN victim_descent IN ('W') THEN 'White'
+    WHEN victim_descent IN ('B') THEN 'Black'
+    WHEN victim_descent IN ('A', 'C', 'D', 'F', 'G', 'J', 'K', 'L', 'P', 'S', 'U', 'V', 'Z') THEN 'Asian / Pacific Islander'
+    ELSE 'Other / Unknown'
+END
+WHERE victim_descent IN ('H', 'W', 'B', 'A', 'C', 'D', 'F', 'G', 'J', 'K', 'L', 'P', 'S', 'U', 'V', 'Z','-','I','O','X') or victim_descent is null;
+
+-- Seeing the table
+select  * from lapd_crime.crime_data.crime_combined
+limit 10 ;
+
+select lapd_crime.crime_data.crime_combined.modus_operandi_codes from lapd_crime.crime_data.crime_combined
+where modus_operandi_codes is null;
+
+UPDATE lapd_crime.crime_data.crime_combined
+SET modus_operandi_codes = 'NONE'
+WHERE modus_operandi_codes IS NULL OR TRIM(modus_operandi_codes) = '';
+
+-- Clearing the city names
+
+UPDATE lapd_crime.crime_data.crime_combined
+SET street_address = TRIM(REGEXP_REPLACE(street_address, '\s+', ' ', 'g'))
+WHERE street_address IS NOT NULL;
+
+-- Treating status code
+select distinct lapd_crime.crime_data.crime_combined.status_code from lapd_crime.crime_data.crime_combined;
+
+UPDATE lapd_crime.crime_data.crime_combined
+SET status_code = CASE
+    WHEN TRIM(status_code) = '13' THEN 'AO'
+    WHEN TRIM(status_code) = '19' THEN 'AA'
+    WHEN status_code IS NULL THEN 'Unknown'
+    ELSE status_code
+END
+where status_code in ('13','19',null);
+
+-- Treating the crime description
+UPDATE lapd_crime.crime_data.crime_combined
+SET crime_description = TRIM(REGEXP_REPLACE(crime_description, '\s+', ' ', 'g'))
+WHERE crime_description IS NOT NULL;
+
+-- Changing the data type of the date columns
+ALTER TABLE lapd_crime.crime_data.crime_combined
+ALTER COLUMN date_reported TYPE DATE
+USING TO_DATE(date_reported, 'MM/DD/YYYY HH:MI:SS AM');
+
+ALTER TABLE lapd_crime.crime_data.crime_combined
+ALTER COLUMN date_occurred TYPE DATE
+USING TO_DATE(date_occurred, 'MM/DD/YYYY HH:MI:SS AM');
+--Seeing the final table and no further changes
+select * from lapd_crime.crime_data.crime_combined
+limit 10 ;
+
+-- Saving the data
+COPY lapd_crime.crime_data.crime_combined
+TO '/Users/apple/Downloads/crime_combined.csv'
+WITH (FORMAT CSV, HEADER TRUE, FORCE_QUOTE *);
