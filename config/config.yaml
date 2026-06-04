@@ -5,15 +5,27 @@ project meta:
 
 data_ingestion:
   artifacts_folder: 'artifacts'
+  log_folder: 'logs'
   raw_data_folder: 'data_before_anything'
   clean_columns: true
   strip_names: true
+  files_to_process:
+    - Crime_Data_from_2010_to_2019.csv
+    - Crime_Data_from_2020_to_2024.csv
+
+  merge:
+    enabled: true
+    files:
+      - Crime_Data_from_2010_to_2019_transformed.csv
+      - Crime_Data_from_2020_to_2024_transformed.csv
 
 postgres:
   host: 'localhost'
-  port: 5432
-  database:
-  username:
-  password:
-  schema:
-  table_name:
+  port: 5433
+  database: 'lapd_crime'
+  username: 'apple'
+  password: ''
+
+export:
+  schema: 'crime_data'
+  merged_table_name: 'crime_combined'

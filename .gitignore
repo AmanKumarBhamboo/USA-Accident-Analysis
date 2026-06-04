@@ -120,6 +120,7 @@ marimo/_lsp/
 __marimo__/
 .streamlit/secrets.toml
 
-# --- Project Specific data_before_anything ---
-# Aapke explicit instructions ke mutabik raw data ko ignore karne ke liye
+# --- Project Specific ---
 data_before_anything/
+artifacts/
+logs/
