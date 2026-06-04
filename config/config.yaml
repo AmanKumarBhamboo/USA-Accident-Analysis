@@ -21,7 +21,7 @@ data_ingestion:
 
 postgres:
   host: 'localhost'
-  port: 5433
+  port: 5432
   database: 'lapd_crime'
   username: 'apple'
   password: ''

@@ -11,20 +11,16 @@ class DataExport:
         log_dir = cfg.get('log_folder', 'logs')
         self.logger = setup_logger('data_export', log_dir)
 
-    def run(self):
+    def _get_engine(self):
         pg_config = self.config.get('postgres', {})
         if not pg_config.get('database'):
-            self.logger.info("No database configured, skipping Postgres export.")
-            return
-
-        export_config = self.config.get('export', {})
-        schema_name = export_config.get('schema', 'crime_data')
+            return None
 
         try:
             from sqlalchemy import create_engine, text
         except ImportError:
             self.logger.warning("sqlalchemy not installed. Run: uv add sqlalchemy psycopg2-binary")
-            return
+            return None
 
         host = pg_config.get('host', 'localhost')
         port = pg_config.get('port', 5432)
@@ -33,10 +29,18 @@ class DataExport:
         password = pg_config.get('password', '')
 
         conn_str = f"postgresql://{username}:{password}@{host}:{port}/{database}"
-        engine = create_engine(conn_str)
-        self.logger.info("Connected to PostgreSQL: %s:%s/%s", host, port, database)
+        return create_engine(conn_str)
+
+    def run(self):
+        engine = self._get_engine()
+        if not engine:
+            return
+
+        export_config = self.config.get('export', {})
+        schema_name = export_config.get('schema', 'crime_data')
 
         with engine.connect() as conn:
+            from sqlalchemy import text
             conn.execute(text(f"CREATE SCHEMA IF NOT EXISTS {schema_name}"))
             conn.commit()
 

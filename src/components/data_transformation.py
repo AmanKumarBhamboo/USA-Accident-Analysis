@@ -1,6 +1,7 @@
 import os
 import re
 import json
+import yaml
 import pandas as pd
 from src.logger import setup_logger
 from src.exceptions import DataTransformationError
@@ -15,6 +16,23 @@ class DataTransformation:
         self._transformed_dfs = {}
         log_dir = cfg.get('log_folder', 'logs')
         self.logger = setup_logger('data_transformation', log_dir)
+
+    def _apply_rename(self, df, output_filename):
+        rename_path = "config/rename_column.yaml"
+        if not os.path.exists(rename_path):
+            return df
+
+        with open(rename_path, 'r') as f:
+            rename_config = yaml.safe_load(f)
+
+        for entry in rename_config.get('rename_columns', []):
+            if entry.get('file') == output_filename:
+                rename_map = entry.get('columns', {})
+                df = df.rename(columns=rename_map)
+                self.logger.info("Applied column rename for %s: %s", output_filename, rename_map)
+                break
+
+        return df
 
     @staticmethod
     def to_snake_case(name):
@@ -122,6 +140,7 @@ class DataTransformation:
             return None
 
         merged_df = pd.concat(frames, ignore_index=True)
+        merged_df = self._apply_rename(merged_df, 'merged.csv')
 
         merged_path = os.path.join(self.artifacts_folder, "merged.csv")
         merged_df.to_csv(merged_path, index=False)

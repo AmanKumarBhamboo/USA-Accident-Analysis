@@ -1,0 +1,31 @@
+rename_columns:
+  - file: 'merged.csv'
+    columns:
+      dr_no: report_number
+      date_rptd: date_reported
+      date_occ: date_occurred
+      time_occ: time_occurred
+      area: area_code
+      area_name: area_name
+      rpt_dist_no: reporting_district_number
+      part_1_2: crime_part_classification
+      crm_cd: crime_code
+      crm_cd_desc: crime_description
+      mocodes: modus_operandi_codes
+      vict_age: victim_age
+      vict_sex: victim_sex
+      vict_descent: victim_descent
+      premis_cd: premise_code
+      premis_desc: premise_description
+      weapon_used_cd: weapon_code
+      weapon_desc: weapon_description
+      status: status_code
+      status_desc: status_description
+      crm_cd_1: crime_code_1_primary
+      crm_cd_2: crime_code_2
+      crm_cd_3: crime_code_3
+      crm_cd_4: crime_code_4
+      location: street_address
+      cross_street: cross_street
+      lat: latitude
+      lon: longitude
