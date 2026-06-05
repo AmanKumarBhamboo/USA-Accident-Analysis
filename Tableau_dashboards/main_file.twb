@@ -1,0 +1,1059 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20261.26.0512.1636                               -->
+<workbook original-version='18.1' source-build='2026.1.2 (20261.26.0512.1636)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column alias='2023' caption='Previous Year' datatype='integer' name='[Current Year (copy)_2463808772857857]' param-domain-type='list' role='measure' type='quantitative' value='2023'>
+        <calculation class='tableau' formula='2023' />
+        <aliases>
+          <alias key='2010' value='2010' />
+          <alias key='2011' value='2011' />
+          <alias key='2012' value='2012' />
+          <alias key='2013' value='2013' />
+          <alias key='2014' value='2014' />
+          <alias key='2015' value='2015' />
+          <alias key='2016' value='2016' />
+          <alias key='2017' value='2017' />
+          <alias key='2018' value='2018' />
+          <alias key='2019' value='2019' />
+          <alias key='2020' value='2020' />
+          <alias key='2021' value='2021' />
+          <alias key='2022' value='2022' />
+          <alias key='2023' value='2023' />
+          <alias key='2024' value='2024' />
+        </aliases>
+        <members>
+          <member alias='2010' value='2010' />
+          <member alias='2011' value='2011' />
+          <member alias='2012' value='2012' />
+          <member alias='2013' value='2013' />
+          <member alias='2014' value='2014' />
+          <member alias='2015' value='2015' />
+          <member alias='2016' value='2016' />
+          <member alias='2017' value='2017' />
+          <member alias='2018' value='2018' />
+          <member alias='2019' value='2019' />
+          <member alias='2020' value='2020' />
+          <member alias='2021' value='2021' />
+          <member alias='2022' value='2022' />
+          <member alias='2023' value='2023' />
+          <member alias='2024' value='2024' />
+        </members>
+      </column>
+      <column alias='2024' caption='Current Year' datatype='integer' name='[Parameter 1]' param-domain-type='list' role='measure' type='quantitative' value='2024'>
+        <calculation class='tableau' formula='2024' />
+        <aliases>
+          <alias key='2010' value='2010' />
+          <alias key='2011' value='2011' />
+          <alias key='2012' value='2012' />
+          <alias key='2013' value='2013' />
+          <alias key='2014' value='2014' />
+          <alias key='2015' value='2015' />
+          <alias key='2016' value='2016' />
+          <alias key='2017' value='2017' />
+          <alias key='2018' value='2018' />
+          <alias key='2019' value='2019' />
+          <alias key='2020' value='2020' />
+          <alias key='2021' value='2021' />
+          <alias key='2022' value='2022' />
+          <alias key='2023' value='2023' />
+          <alias key='2024' value='2024' />
+        </aliases>
+        <members>
+          <member alias='2010' value='2010' />
+          <member alias='2011' value='2011' />
+          <member alias='2012' value='2012' />
+          <member alias='2013' value='2013' />
+          <member alias='2014' value='2014' />
+          <member alias='2015' value='2015' />
+          <member alias='2016' value='2016' />
+          <member alias='2017' value='2017' />
+          <member alias='2018' value='2018' />
+          <member alias='2019' value='2019' />
+          <member alias='2020' value='2020' />
+          <member alias='2021' value='2021' />
+          <member alias='2022' value='2022' />
+          <member alias='2023' value='2023' />
+          <member alias='2024' value='2024' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='crime_combined_final' inline='true' name='federated.0rfx2t11kb0q6716oi5zg0i7h96y' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='crime_combined_final' name='textscan.1osm2qr1rxcwlt1dnjm9x0kflvuw'>
+            <connection class='textscan' directory='/Users/apple/Downloads' filename='crime_combined_final.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1osm2qr1rxcwlt1dnjm9x0kflvuw' name='crime_combined_final.csv' table='[crime_combined_final#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='integer' name='drno' ordinal='0' />
+            <column datatype='date' name='date_reported' ordinal='1' />
+            <column datatype='date' name='date_occurred' ordinal='2' />
+            <column datatype='datetime' name='time_occurred' ordinal='3' />
+            <column datatype='integer' name='area_code' ordinal='4' />
+            <column datatype='string' name='area_name' ordinal='5' />
+            <column datatype='integer' name='reporting_district_number' ordinal='6' />
+            <column datatype='integer' name='part_12' ordinal='7' />
+            <column datatype='integer' name='crime_code' ordinal='8' />
+            <column datatype='string' name='crime_description' ordinal='9' />
+            <column datatype='string' name='modus_operandi_codes' ordinal='10' />
+            <column datatype='integer' name='victim_age' ordinal='11' />
+            <column datatype='string' name='victim_sex' ordinal='12' />
+            <column datatype='string' name='victim_descent' ordinal='13' />
+            <column datatype='integer' name='premise_code' ordinal='14' />
+            <column datatype='string' name='premise_description' ordinal='15' />
+            <column datatype='integer' name='weapon_code' ordinal='16' />
+            <column datatype='string' name='weapon_description' ordinal='17' />
+            <column datatype='string' name='status_code' ordinal='18' />
+            <column datatype='string' name='status_description' ordinal='19' />
+            <column datatype='integer' name='crime_code_1_primary' ordinal='20' />
+            <column datatype='string' name='street_address' ordinal='21' />
+            <column datatype='string' name='cross_street' ordinal='22' />
+            <column datatype='integer' name='has_multiple_crime' ordinal='23' />
+            <column datatype='string' name='described_location' ordinal='24' />
+            <column datatype='string' name='part_of_day' ordinal='25' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[crime_combined_final.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>drno</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[drno]</local-name>
+            <parent-name>[crime_combined_final.csv]</parent-name>
+            <remote-alias>drno</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date_reported</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[date_reported]</local-name>
+            <parent-name>[crime_combined_final.csv]</parent-name>
+            <remote-alias>date_reported</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date_occurred</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[date_occurred]</local-name>
+            <parent-name>[crime_combined_final.csv]</parent-name>
+            <remote-alias>date_occurred</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>time_occurred</remote-name>
+            <remote-type>134</remote-type>
+            <local-name>[time_occurred]</local-name>
+            <parent-name>[crime_combined_final.csv]</parent-name>
+            <remote-alias>time_occurred</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Hour</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>area_code</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[area_code]</local-name>
+            <parent-name>[crime_combined_final.csv]</parent-name>
+            <remote-alias>area_code</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>area_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[area_name]</local-name>
+            <parent-name>[crime_combined_final.csv]</parent-name>
+            <remote-alias>area_name</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>reporting_district_number</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[reporting_district_number]</local-name>
+            <parent-name>[crime_combined_final.csv]</parent-name>
+            <remote-alias>reporting_district_number</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>part_12</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[part_12]</local-name>
+            <parent-name>[crime_combined_final.csv]</parent-name>
+            <remote-alias>part_12</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>crime_code</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[crime_code]</local-name>
+            <parent-name>[crime_combined_final.csv]</parent-name>
+            <remote-alias>crime_code</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>crime_description</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[crime_description]</local-name>
+            <parent-name>[crime_combined_final.csv]</parent-name>
+            <remote-alias>crime_description</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>modus_operandi_codes</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[modus_operandi_codes]</local-name>
+            <parent-name>[crime_combined_final.csv]</parent-name>
+            <remote-alias>modus_operandi_codes</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>victim_age</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[victim_age]</local-name>
+            <parent-name>[crime_combined_final.csv]</parent-name>
+            <remote-alias>victim_age</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>victim_sex</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[victim_sex]</local-name>
+            <parent-name>[crime_combined_final.csv]</parent-name>
+            <remote-alias>victim_sex</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>victim_descent</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[victim_descent]</local-name>
+            <parent-name>[crime_combined_final.csv]</parent-name>
+            <remote-alias>victim_descent</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>premise_code</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[premise_code]</local-name>
+            <parent-name>[crime_combined_final.csv]</parent-name>
+            <remote-alias>premise_code</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>premise_description</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[premise_description]</local-name>
+            <parent-name>[crime_combined_final.csv]</parent-name>
+            <remote-alias>premise_description</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>weapon_code</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[weapon_code]</local-name>
+            <parent-name>[crime_combined_final.csv]</parent-name>
+            <remote-alias>weapon_code</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>weapon_description</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[weapon_description]</local-name>
+            <parent-name>[crime_combined_final.csv]</parent-name>
+            <remote-alias>weapon_description</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>status_code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[status_code]</local-name>
+            <parent-name>[crime_combined_final.csv]</parent-name>
+            <remote-alias>status_code</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>status_description</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[status_description]</local-name>
+            <parent-name>[crime_combined_final.csv]</parent-name>
+            <remote-alias>status_description</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>crime_code_1_primary</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[crime_code_1_primary]</local-name>
+            <parent-name>[crime_combined_final.csv]</parent-name>
+            <remote-alias>crime_code_1_primary</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>street_address</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[street_address]</local-name>
+            <parent-name>[crime_combined_final.csv]</parent-name>
+            <remote-alias>street_address</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cross_street</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[cross_street]</local-name>
+            <parent-name>[crime_combined_final.csv]</parent-name>
+            <remote-alias>cross_street</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>has_multiple_crime</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[has_multiple_crime]</local-name>
+            <parent-name>[crime_combined_final.csv]</parent-name>
+            <remote-alias>has_multiple_crime</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>described_location</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[described_location]</local-name>
+            <parent-name>[crime_combined_final.csv]</parent-name>
+            <remote-alias>described_location</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>part_of_day</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[part_of_day]</local-name>
+            <parent-name>[crime_combined_final.csv]</parent-name>
+            <remote-alias>part_of_day</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column aggregation='Sum' caption='Year of Crime Occured' datatype='integer' name='[Calculation_2463808770899968]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='YEAR([date_occurred])' />
+      </column>
+      <column caption='crime_combined_final.csv' datatype='table' name='[__tableau_internal_object_id__].[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]' role='measure' type='quantitative' />
+      <column caption='Area Code' datatype='integer' name='[area_code]' role='dimension' type='ordinal' />
+      <column caption='Area Name' datatype='string' name='[area_name]' role='dimension' type='nominal' />
+      <column caption='Crime Code' datatype='integer' name='[crime_code]' role='dimension' type='ordinal' />
+      <column caption='Crime Code 1 Primary' datatype='integer' name='[crime_code_1_primary]' role='measure' type='quantitative' />
+      <column caption='Crime Description' datatype='string' name='[crime_description]' role='dimension' type='nominal' />
+      <column caption='Cross Street' datatype='string' name='[cross_street]' role='dimension' type='nominal' />
+      <column caption='Date Occurred' datatype='date' name='[date_occurred]' role='dimension' type='ordinal' />
+      <column caption='Date Reported' datatype='date' name='[date_reported]' role='dimension' type='ordinal' />
+      <column aggregation='Avg' caption='Lattitude' datatype='real' name='[described_location - Split 1]' role='dimension' semantic-role='[Geographical].[Latitude]' type='quantitative' user:SplitFieldIndex='1' user:SplitFieldOrigin='[federated.0rfx2t11kb0q6716oi5zg0i7h96y].[described_location]'>
+        <calculation class='tableau' formula='FLOAT( SPLIT( SPLIT( [described_location], &quot;(&quot;, 2 ), &quot;,&quot;, 1 ) )' />
+      </column>
+      <column aggregation='Avg' caption='Longitiude' datatype='real' name='[described_location - Split 2]' role='dimension' semantic-role='[Geographical].[Longitude]' type='quantitative' user:SplitFieldIndex='2' user:SplitFieldOrigin='[federated.0rfx2t11kb0q6716oi5zg0i7h96y].[described_location]'>
+        <calculation class='tableau' formula='FLOAT( SPLIT( SPLIT( SPLIT( [described_location], &quot;(&quot;, 2 ), &quot;,&quot;, 2 ), &quot;)&quot;, 1 ) )' />
+      </column>
+      <column caption='Described Location' datatype='string' name='[described_location]' role='dimension' type='nominal' />
+      <column caption='Drno' datatype='integer' name='[drno]' role='measure' type='quantitative' />
+      <column caption='Has Multiple Crime' datatype='integer' name='[has_multiple_crime]' role='measure' type='quantitative' />
+      <column caption='Modus Operandi Codes' datatype='string' name='[modus_operandi_codes]' role='dimension' type='nominal' />
+      <column caption='Part 12' datatype='integer' name='[part_12]' role='measure' type='quantitative' />
+      <column caption='Part Of Day' datatype='string' name='[part_of_day]' role='dimension' type='nominal' />
+      <column caption='Premise Code' datatype='integer' name='[premise_code]' role='dimension' type='ordinal' />
+      <column caption='Premise Description' datatype='string' name='[premise_description]' role='dimension' type='nominal' />
+      <column caption='Reporting District Number' datatype='integer' name='[reporting_district_number]' role='dimension' type='ordinal' />
+      <column caption='Status Code' datatype='string' name='[status_code]' role='dimension' type='nominal' />
+      <column caption='Status Description' datatype='string' name='[status_description]' role='dimension' type='nominal' />
+      <column caption='Street Address' datatype='string' name='[street_address]' role='dimension' type='nominal' />
+      <column aggregation='Hour' caption='Time Occurred' datatype='datetime' name='[time_occurred]' role='dimension' type='ordinal' />
+      <column caption='Victim Age' datatype='integer' name='[victim_age]' role='measure' type='quantitative' />
+      <column caption='Victim Descent' datatype='string' name='[victim_descent]' role='dimension' type='nominal' />
+      <column caption='Victim Sex' datatype='string' name='[victim_sex]' role='dimension' type='nominal' />
+      <column caption='Weapon Code' datatype='integer' name='[weapon_code]' role='dimension' type='ordinal' />
+      <column caption='Weapon Description' datatype='string' name='[weapon_description]' role='dimension' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/gd/czsv0hss3zbc9sfvdxnpglqc0000gn/T/tableau-temp/#TableauTemp_049jczk0636cuz18uwl6a0577xvb.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='06/05/2026 03:18:18 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>drno</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[drno]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>drno</remote-alias>
+              <ordinal>0</ordinal>
+              <family>crime_combined_final.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3116481</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>date_reported</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[date_reported]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>date_reported</remote-alias>
+              <ordinal>1</ordinal>
+              <family>crime_combined_final.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>16216</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>date_occurred</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[date_occurred]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>date_occurred</remote-alias>
+              <ordinal>2</ordinal>
+              <family>crime_combined_final.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>16418</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>time_occurred</remote-name>
+              <remote-type>134</remote-type>
+              <local-name>[time_occurred]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>time_occurred</remote-alias>
+              <ordinal>3</ordinal>
+              <family>crime_combined_final.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Hour</aggregation>
+              <approx-count>5039</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>area_code</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[area_code]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>area_code</remote-alias>
+              <ordinal>4</ordinal>
+              <family>crime_combined_final.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>21</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>area_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[area_name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>area_name</remote-alias>
+              <ordinal>5</ordinal>
+              <family>crime_combined_final.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>21</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>reporting_district_number</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[reporting_district_number]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>reporting_district_number</remote-alias>
+              <ordinal>6</ordinal>
+              <family>crime_combined_final.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1491</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>part_12</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[part_12]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>part_12</remote-alias>
+              <ordinal>7</ordinal>
+              <family>crime_combined_final.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>crime_code</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[crime_code]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>crime_code</remote-alias>
+              <ordinal>8</ordinal>
+              <family>crime_combined_final.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>168</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>crime_description</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[crime_description]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>crime_description</remote-alias>
+              <ordinal>9</ordinal>
+              <family>crime_combined_final.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>168</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>modus_operandi_codes</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[modus_operandi_codes]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>modus_operandi_codes</remote-alias>
+              <ordinal>10</ordinal>
+              <family>crime_combined_final.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>232244</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>victim_age</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[victim_age]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>victim_age</remote-alias>
+              <ordinal>11</ordinal>
+              <family>crime_combined_final.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>158</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>victim_sex</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[victim_sex]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>victim_sex</remote-alias>
+              <ordinal>12</ordinal>
+              <family>crime_combined_final.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>victim_descent</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[victim_descent]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>victim_descent</remote-alias>
+              <ordinal>13</ordinal>
+              <family>crime_combined_final.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>premise_code</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[premise_code]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>premise_code</remote-alias>
+              <ordinal>14</ordinal>
+              <family>crime_combined_final.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>539</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>premise_description</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[premise_description]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>premise_description</remote-alias>
+              <ordinal>15</ordinal>
+              <family>crime_combined_final.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>539</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>weapon_code</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[weapon_code]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>weapon_code</remote-alias>
+              <ordinal>16</ordinal>
+              <family>crime_combined_final.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>116</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>weapon_description</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[weapon_description]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>weapon_description</remote-alias>
+              <ordinal>17</ordinal>
+              <family>crime_combined_final.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>116</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>status_code</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[status_code]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>status_code</remote-alias>
+              <ordinal>18</ordinal>
+              <family>crime_combined_final.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>status_description</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[status_description]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>status_description</remote-alias>
+              <ordinal>19</ordinal>
+              <family>crime_combined_final.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>crime_code_1_primary</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[crime_code_1_primary]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>crime_code_1_primary</remote-alias>
+              <ordinal>20</ordinal>
+              <family>crime_combined_final.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>185</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>street_address</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[street_address]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>street_address</remote-alias>
+              <ordinal>21</ordinal>
+              <family>crime_combined_final.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>155473</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cross_street</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[cross_street]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>cross_street</remote-alias>
+              <ordinal>22</ordinal>
+              <family>crime_combined_final.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>15510</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>has_multiple_crime</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[has_multiple_crime]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>has_multiple_crime</remote-alias>
+              <ordinal>23</ordinal>
+              <family>crime_combined_final.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>described_location</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[described_location]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>described_location</remote-alias>
+              <ordinal>24</ordinal>
+              <family>crime_combined_final.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>165856</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>part_of_day</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[part_of_day]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>part_of_day</remote-alias>
+              <ordinal>25</ordinal>
+              <family>crime_combined_final.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='crime_combined_final.csv' id='crime_combined_final.csv_74E442CCC1B045F88D1940A54EE449EF'>
+            <properties context=''>
+              <relation connection='textscan.1osm2qr1rxcwlt1dnjm9x0kflvuw' name='crime_combined_final.csv' table='[crime_combined_final#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='integer' name='drno' ordinal='0' />
+                  <column datatype='date' name='date_reported' ordinal='1' />
+                  <column datatype='date' name='date_occurred' ordinal='2' />
+                  <column datatype='datetime' name='time_occurred' ordinal='3' />
+                  <column datatype='integer' name='area_code' ordinal='4' />
+                  <column datatype='string' name='area_name' ordinal='5' />
+                  <column datatype='integer' name='reporting_district_number' ordinal='6' />
+                  <column datatype='integer' name='part_12' ordinal='7' />
+                  <column datatype='integer' name='crime_code' ordinal='8' />
+                  <column datatype='string' name='crime_description' ordinal='9' />
+                  <column datatype='string' name='modus_operandi_codes' ordinal='10' />
+                  <column datatype='integer' name='victim_age' ordinal='11' />
+                  <column datatype='string' name='victim_sex' ordinal='12' />
+                  <column datatype='string' name='victim_descent' ordinal='13' />
+                  <column datatype='integer' name='premise_code' ordinal='14' />
+                  <column datatype='string' name='premise_description' ordinal='15' />
+                  <column datatype='integer' name='weapon_code' ordinal='16' />
+                  <column datatype='string' name='weapon_description' ordinal='17' />
+                  <column datatype='string' name='status_code' ordinal='18' />
+                  <column datatype='string' name='status_description' ordinal='19' />
+                  <column datatype='integer' name='crime_code_1_primary' ordinal='20' />
+                  <column datatype='string' name='street_address' ordinal='21' />
+                  <column datatype='string' name='cross_street' ordinal='22' />
+                  <column datatype='integer' name='has_multiple_crime' ordinal='23' />
+                  <column datatype='string' name='described_location' ordinal='24' />
+                  <column datatype='string' name='part_of_day' ordinal='25' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{B1E1756E-6206-42C8-AF1E-B816ED424DB6}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0rfx2t11kb0q6716oi5zg0i7h96y].[none:Calculation_2463808770899968:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{0937BCD4-0AC5-468C-9526-2F5379F329FE}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='384' name='Sheet 1' width='384'>
+      iVBORw0KGgoAAAANSUhEUgAAAYAAAAGACAYAAACkx7W/AAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAFXUlEQVR4nO3VMQEAIAzAMMC/5yFjRxMF/XpnZg4AOW87AIAdBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEfFxoG/IiMv0YAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
